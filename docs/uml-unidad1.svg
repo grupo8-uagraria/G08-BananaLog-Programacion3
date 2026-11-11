@@ -1,0 +1,262 @@
+<svg viewBox="0 0 1000 720" xmlns="http://www.w3.org/2000/svg" font-family="Arial,sans-serif" font-size="11">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+    <marker id="open" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polyline points="0 0, 10 3.5, 0 7" fill="none" stroke="#333" stroke-width="1.5"/>
+    </marker>
+    <marker id="diamond-filled" markerWidth="12" markerHeight="8" refX="0" refY="4" orient="auto">
+      <polygon points="0 4, 6 0, 12 4, 6 8" fill="#333"/>
+    </marker>
+    <marker id="diamond-empty" markerWidth="12" markerHeight="8" refX="0" refY="4" orient="auto">
+      <polygon points="0 4, 6 0, 12 4, 6 8" fill="white" stroke="#333" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="720" fill="#f8f9fa"/>
+  <text x="500" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">BananaLog G08 — UML Unidad 1 (Taller 4)</text>
+
+  <!-- LEGEND -->
+  <rect x="20" y="40" width="200" height="110" fill="white" stroke="#aaa" rx="4"/>
+  <text x="30" y="58" font-size="10" font-weight="bold">Leyenda</text>
+  <line x1="30" y1="68" x2="60" y2="68" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#open)"/>
+  <text x="68" y="72" font-size="10">Implementación</text>
+  <line x1="30" y1="85" x2="60" y2="85" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="68" y="89" font-size="10">Dependencia</text>
+  <line x1="30" y1="102" x2="60" y2="102" stroke="#333" stroke-width="1.5" marker-start="url(#diamond-filled)" marker-end="url(#arr)"/>
+  <text x="68" y="106" font-size="10">Composición ◆</text>
+  <line x1="30" y1="119" x2="60" y2="119" stroke="#333" stroke-width="1.5" marker-start="url(#diamond-empty)" marker-end="url(#arr)"/>
+  <text x="68" y="123" font-size="10">Agregación ◇</text>
+  <rect x="22" y="128" width="80" height="16" fill="#e8f4fd" stroke="#5b9bd5"/>
+  <text x="62" y="140" text-anchor="middle" font-size="9">«interface»</text>
+  <rect x="112" y="128" width="80" height="16" fill="#fff3cd" stroke="#ffc107"/>
+  <text x="152" y="140" text-anchor="middle" font-size="9">«enum»</text>
+
+  <!-- ==== DOMINIO ==== -->
+  <text x="260" y="58" font-size="12" font-weight="bold" fill="#155724">paquete dominio</text>
+
+  <!-- Trazable -->
+  <rect x="230" y="66" width="140" height="58" fill="white" stroke="#155724" rx="3"/>
+  <rect x="230" y="66" width="140" height="20" fill="#d4edda" rx="3"/>
+  <text x="300" y="80" text-anchor="middle" font-weight="bold">Trazable</text>
+  <text x="300" y="93" text-anchor="middle" font-size="10" fill="#666">«utility»</text>
+  <line x1="230" y1="86" x2="370" y2="86" stroke="#155724"/>
+  <text x="240" y="100" font-size="10">+generarCodigo(prefijo):String</text>
+  <text x="240" y="112" font-size="10" fill="#888">«static»</text>
+
+  <!-- LoteBanano -->
+  <rect x="230" y="150" width="160" height="105" fill="white" stroke="#155724" rx="3"/>
+  <rect x="230" y="150" width="160" height="20" fill="#d4edda" rx="3"/>
+  <text x="310" y="164" text-anchor="middle" font-weight="bold">LoteBanano</text>
+  <text x="310" y="177" text-anchor="middle" font-size="9" fill="#666">«record»</text>
+  <line x1="230" y1="170" x2="390" y2="170" stroke="#155724"/>
+  <text x="238" y="184" font-size="9">codigo: String</text>
+  <text x="238" y="196" font-size="9">cajasTotales: int</text>
+  <text x="238" y="208" font-size="9">cajasContadas: int</text>
+  <text x="238" y="220" font-size="9">certificado: boolean</text>
+  <text x="238" y="232" font-size="9">fechaCosecha: LocalDate</text>
+  <text x="238" y="244" font-size="9">diasTransito: int</text>
+
+  <!-- Contenedor -->
+  <rect x="405" y="150" width="150" height="92" fill="white" stroke="#155724" rx="3"/>
+  <rect x="405" y="150" width="150" height="20" fill="#d4edda" rx="3"/>
+  <text x="480" y="164" text-anchor="middle" font-weight="bold">Contenedor</text>
+  <text x="480" y="177" text-anchor="middle" font-size="9" fill="#666">«record»</text>
+  <line x1="405" y1="170" x2="555" y2="170" stroke="#155724"/>
+  <text x="413" y="184" font-size="9">codigo: String</text>
+  <text x="413" y="196" font-size="9">numeroContenedor: String</text>
+  <text x="413" y="208" font-size="9">capacidadCajas: int</text>
+  <text x="413" y="220" font-size="9">temperaturaCelsius: double</text>
+
+  <!-- InsumoEmpaque -->
+  <rect x="405" y="260" width="150" height="80" fill="white" stroke="#155724" rx="3"/>
+  <rect x="405" y="260" width="150" height="20" fill="#d4edda" rx="3"/>
+  <text x="480" y="274" text-anchor="middle" font-weight="bold">InsumoEmpaque</text>
+  <text x="480" y="287" text-anchor="middle" font-size="9" fill="#666">«record»</text>
+  <line x1="405" y1="280" x2="555" y2="280" stroke="#155724"/>
+  <text x="413" y="294" font-size="9">codigo: String</text>
+  <text x="413" y="306" font-size="9">nombre: String</text>
+  <text x="413" y="318" font-size="9">stockActual: int</text>
+  <text x="413" y="330" font-size="9">stockMinimo: int</text>
+
+  <!-- ==== FÁBRICA ==== -->
+  <text x="620" y="58" font-size="12" font-weight="bold" fill="#6f42c1">paquete fabrica</text>
+
+  <!-- TipoProducto enum -->
+  <rect x="600" y="66" width="140" height="78" fill="#f3e8ff" stroke="#6f42c1" rx="3"/>
+  <rect x="600" y="66" width="140" height="20" fill="#d4bfff" rx="3"/>
+  <text x="670" y="80" text-anchor="middle" font-weight="bold">TipoProducto</text>
+  <text x="670" y="93" text-anchor="middle" font-size="9">«enum»</text>
+  <line x1="600" y1="86" x2="740" y2="86" stroke="#6f42c1"/>
+  <text x="610" y="100" font-size="10">LOTE_BANANO</text>
+  <text x="610" y="112" font-size="10">CONTENEDOR</text>
+  <text x="610" y="124" font-size="10">INSUMO_EMPAQUE</text>
+  <text x="610" y="136" font-size="9" fill="#888">switch sin default</text>
+
+  <!-- FabricaProductos -->
+  <rect x="600" y="162" width="160" height="68" fill="white" stroke="#6f42c1" rx="3"/>
+  <rect x="600" y="162" width="160" height="20" fill="#d4bfff" rx="3"/>
+  <text x="680" y="176" text-anchor="middle" font-weight="bold">FabricaProductos</text>
+  <text x="680" y="190" text-anchor="middle" font-size="9" fill="#666">«utility»</text>
+  <line x1="600" y1="182" x2="760" y2="182" stroke="#6f42c1"/>
+  <text x="608" y="197" font-size="9">+crearLoteBanano(…):LoteBanano</text>
+  <text x="608" y="209" font-size="9">+crearContenedor(…):Contenedor</text>
+  <text x="608" y="221" font-size="9">+crearInsumoEmpaque(…):InsumoEmpaque</text>
+
+  <!-- ==== REGLAS ==== -->
+  <text x="20" y="310" font-size="12" font-weight="bold" fill="#6c3483">paquete reglas</text>
+
+  <!-- Reglas -->
+  <rect x="20" y="320" width="195" height="90" fill="white" stroke="#6c3483" rx="3"/>
+  <rect x="20" y="320" width="195" height="20" fill="#d7bde2" rx="3"/>
+  <text x="117" y="334" text-anchor="middle" font-weight="bold">Reglas</text>
+  <text x="117" y="347" text-anchor="middle" font-size="9" fill="#666">«utility»</text>
+  <line x1="20" y1="340" x2="215" y2="340" stroke="#6c3483"/>
+  <text x="28" y="356" font-size="9">+descuadreCajas():ReglaAlerta</text>
+  <text x="28" y="368" font-size="9">+certificacionFaltante():ReglaAlerta</text>
+  <text x="28" y="380" font-size="9">+frutaPasada():ReglaAlerta</text>
+  <text x="28" y="396" font-size="9" fill="#888">Lee umbrales de ConfiguracionBananaLog</text>
+
+  <!-- ==== ALERTAS ==== -->
+  <text x="230" y="310" font-size="12" font-weight="bold" fill="#c0392b">paquete alertas</text>
+
+  <!-- «interface» ReglaAlerta -->
+  <rect x="230" y="320" width="150" height="52" fill="#fde8e8" stroke="#c0392b" rx="3"/>
+  <rect x="230" y="320" width="150" height="20" fill="#f5b7b1" rx="3"/>
+  <text x="305" y="334" text-anchor="middle" font-style="italic">«interface»</text>
+  <text x="305" y="348" text-anchor="middle" font-weight="bold">ReglaAlerta</text>
+  <line x1="230" y1="352" x2="380" y2="352" stroke="#c0392b"/>
+  <text x="238" y="364" font-size="9">+evaluar(lote:LoteBanano):Optional&lt;Alerta&gt;</text>
+
+  <!-- «interface» ObservadorAlertas -->
+  <rect x="400" y="320" width="165" height="52" fill="#fde8e8" stroke="#c0392b" rx="3"/>
+  <rect x="400" y="320" width="165" height="20" fill="#f5b7b1" rx="3"/>
+  <text x="482" y="334" text-anchor="middle" font-style="italic">«interface»</text>
+  <text x="482" y="348" text-anchor="middle" font-weight="bold">ObservadorAlertas</text>
+  <line x1="400" y1="352" x2="565" y2="352" stroke="#c0392b"/>
+  <text x="408" y="364" font-size="9">+notificar(alerta:Alerta):void</text>
+
+  <!-- TipoAlerta enum -->
+  <rect x="600" y="280" width="145" height="78" fill="#fff3cd" stroke="#c0392b" rx="3"/>
+  <rect x="600" y="280" width="145" height="20" fill="#ffeaa7" rx="3"/>
+  <text x="672" y="294" text-anchor="middle" font-weight="bold">TipoAlerta</text>
+  <text x="672" y="307" text-anchor="middle" font-size="9">«enum»</text>
+  <line x1="600" y1="300" x2="745" y2="300" stroke="#c0392b"/>
+  <text x="608" y="315" font-size="10">DESCUADRE_CAJAS</text>
+  <text x="608" y="327" font-size="10">CERTIFICACION_FALTANTE</text>
+  <text x="608" y="339" font-size="10">FRUTA_PASADA</text>
+
+  <!-- Alerta record -->
+  <rect x="600" y="376" width="145" height="78" fill="white" stroke="#c0392b" rx="3"/>
+  <rect x="600" y="376" width="145" height="20" fill="#f5b7b1" rx="3"/>
+  <text x="672" y="390" text-anchor="middle" font-weight="bold">Alerta</text>
+  <text x="672" y="403" text-anchor="middle" font-size="9" fill="#666">«record»</text>
+  <line x1="600" y1="396" x2="745" y2="396" stroke="#c0392b"/>
+  <text x="608" y="410" font-size="9">tipo: TipoAlerta</text>
+  <text x="608" y="422" font-size="9">codigoLote: String</text>
+  <text x="608" y="434" font-size="9">mensaje: String</text>
+  <text x="608" y="446" font-size="9">timestamp: LocalDateTime</text>
+
+  <!-- ConfiguracionBananaLog singleton -->
+  <rect x="230" y="398" width="195" height="78" fill="#fff3cd" stroke="#c0392b" rx="3"/>
+  <rect x="230" y="398" width="195" height="20" fill="#ffeaa7" rx="3"/>
+  <text x="327" y="412" text-anchor="middle" font-weight="bold">ConfiguracionBananaLog</text>
+  <text x="327" y="425" text-anchor="middle" font-size="9">«enum Singleton»</text>
+  <line x1="230" y1="418" x2="425" y2="418" stroke="#c0392b"/>
+  <text x="238" y="432" font-size="9">INSTANCIA</text>
+  <text x="238" y="444" font-size="9">umbralDescuadrePorcentaje: double</text>
+  <text x="238" y="456" font-size="9">umbralDiasTransitoMaximo: int</text>
+  <text x="238" y="468" font-size="9">+getters/setters</text>
+
+  <!-- MotorAlertas -->
+  <rect x="230" y="500" width="195" height="90" fill="white" stroke="#c0392b" rx="3"/>
+  <rect x="230" y="500" width="195" height="20" fill="#f5b7b1" rx="3"/>
+  <text x="327" y="514" text-anchor="middle" font-weight="bold">MotorAlertas</text>
+  <line x1="230" y1="520" x2="425" y2="520" stroke="#c0392b"/>
+  <text x="238" y="534" font-size="9">-reglas: List&lt;ReglaAlerta&gt;</text>
+  <text x="238" y="546" font-size="9">-observadores: List&lt;ObservadorAlertas&gt;</text>
+  <line x1="230" y1="550" x2="425" y2="550" stroke="#ccc" stroke-dasharray="2,2"/>
+  <text x="238" y="563" font-size="9">+agregarRegla(r:ReglaAlerta):void</text>
+  <text x="238" y="575" font-size="9">+suscribir(o:ObservadorAlertas):void</text>
+  <text x="238" y="587" font-size="9">+procesar(lote:LoteBanano):int</text>
+
+  <!-- TipoObservador enum -->
+  <rect x="600" y="474" width="145" height="70" fill="#fff3cd" stroke="#c0392b" rx="3"/>
+  <rect x="600" y="474" width="145" height="20" fill="#ffeaa7" rx="3"/>
+  <text x="672" y="488" text-anchor="middle" font-weight="bold">TipoObservador</text>
+  <text x="672" y="501" text-anchor="middle" font-size="9">«enum»</text>
+  <line x1="600" y1="494" x2="745" y2="494" stroke="#c0392b"/>
+  <text x="608" y="508" font-size="10">CONSOLA</text>
+  <text x="608" y="520" font-size="10">BITACORA</text>
+  <text x="608" y="532" font-size="10">SMS_SIMULADO</text>
+
+  <!-- FabricaObservadores -->
+  <rect x="600" y="562" width="160" height="68" fill="white" stroke="#c0392b" rx="3"/>
+  <rect x="600" y="562" width="160" height="20" fill="#f5b7b1" rx="3"/>
+  <text x="680" y="576" text-anchor="middle" font-weight="bold">FabricaObservadores</text>
+  <text x="680" y="590" text-anchor="middle" font-size="9" fill="#666">«utility»</text>
+  <line x1="600" y1="582" x2="760" y2="582" stroke="#c0392b"/>
+  <text x="608" y="596" font-size="9">+crear(tipo,bitacora)</text>
+  <text x="608" y="608" font-size="9">   :ObservadorAlertas</text>
+  <text x="608" y="620" font-size="9" fill="#888">switch sin default</text>
+
+  <!-- ============ RELACIONES ============ -->
+
+  <!-- FabricaProductos --dep--> Trazable -->
+  <line x1="600" y1="196" x2="370" y2="96" stroke="#6f42c1" stroke-dasharray="5,3" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="470" y="145" font-size="9" fill="#6f42c1">«usa»</text>
+
+  <!-- FabricaProductos --dep--> LoteBanano -->
+  <line x1="600" y1="210" x2="390" y2="210" stroke="#6f42c1" stroke-dasharray="5,3" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- FabricaProductos --dep--> Contenedor -->
+  <line x1="600" y1="186" x2="555" y2="186" stroke="#6f42c1" stroke-dasharray="5,3" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- FabricaProductos --dep--> InsumoEmpaque -->
+  <line x1="600" y1="220" x2="560" y2="300" stroke="#6f42c1" stroke-dasharray="5,3" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Reglas --impl--> ReglaAlerta -->
+  <line x1="215" y1="360" x2="230" y2="355" stroke="#6c3483" stroke-dasharray="5,3" stroke-width="1.5" marker-end="url(#open)"/>
+
+  <!-- Reglas --dep--> ConfiguracionBananaLog -->
+  <line x1="117" y1="410" x2="230" y2="430" stroke="#6c3483" stroke-dasharray="5,3" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- MotorAlertas composición ---> ReglaAlerta -->
+  <line x1="327" y1="500" x2="305" y2="372" stroke="#c0392b" stroke-width="1.5" marker-start="url(#diamond-filled)" marker-end="url(#arr)"/>
+  <text x="295" y="440" font-size="8" fill="#c0392b">1..*</text>
+
+  <!-- MotorAlertas composición ---> ObservadorAlertas -->
+  <line x1="390" y1="500" x2="455" y2="372" stroke="#c0392b" stroke-width="1.5" marker-start="url(#diamond-filled)" marker-end="url(#arr)"/>
+  <text x="440" y="435" font-size="8" fill="#c0392b">1..*</text>
+
+  <!-- MotorAlertas agregación ---> Alerta -->
+  <line x1="425" y1="545" x2="600" y2="430" stroke="#c0392b" stroke-width="1.5" marker-start="url(#diamond-empty)" marker-end="url(#arr)"/>
+
+  <!-- FabricaObservadores --impl--> ObservadorAlertas -->
+  <line x1="680" y1="562" x2="540" y2="372" stroke="#c0392b" stroke-dasharray="5,3" stroke-width="1.5" marker-end="url(#open)"/>
+
+  <!-- Alerta dep--> TipoAlerta -->
+  <line x1="672" y1="376" x2="672" y2="358" stroke="#c0392b" stroke-dasharray="5,3" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Notas SOLID -->
+  <rect x="790" y="300" width="195" height="250" fill="#fffff0" stroke="#bbb" rx="4"/>
+  <text x="887" y="318" text-anchor="middle" font-size="11" font-weight="bold">Principios SOLID</text>
+  <text x="800" y="336" font-size="10" fill="#c00"><tspan font-weight="bold">S</tspan> — Reglas.descuadreCajas()</text>
+  <text x="800" y="350" font-size="9" fill="#444">   un solo motivo de cambio</text>
+  <text x="800" y="368" font-size="10" fill="#c00"><tspan font-weight="bold">O</tspan> — MotorAlertas</text>
+  <text x="800" y="382" font-size="9" fill="#444">   abierto a nuevas reglas,</text>
+  <text x="800" y="394" font-size="9" fill="#444">   cerrado a modificaciones</text>
+  <text x="800" y="412" font-size="10" fill="#c00"><tspan font-weight="bold">L</tspan> — FabricaObservadores</text>
+  <text x="800" y="426" font-size="9" fill="#444">   obs. intercambiables</text>
+  <text x="800" y="444" font-size="10" fill="#c00"><tspan font-weight="bold">I</tspan> — ReglaAlerta / ObservadorAlertas</text>
+  <text x="800" y="458" font-size="9" fill="#444">   interfaces de un método</text>
+  <text x="800" y="476" font-size="10" fill="#c00"><tspan font-weight="bold">D</tspan> — MotorAlertas</text>
+  <text x="800" y="490" font-size="9" fill="#444">   depende de abstracciones,</text>
+  <text x="800" y="502" font-size="9" fill="#444">   no de implementaciones</text>
+  <text x="800" y="520" font-size="9" font-style="italic" fill="#888">Composición sobre herencia:</text>
+  <text x="800" y="532" font-size="9" font-style="italic" fill="#888">MotorAlertas compone listas</text>
+  <text x="800" y="544" font-size="9" font-style="italic" fill="#888">en lugar de heredar.</text>
+
+  <!-- Footer -->
+  <text x="500" y="710" text-anchor="middle" font-size="9" fill="#888">G08 BananaLog · UAE Programación 3 · Período 2026-2027 CII · Ing. Hamilton Villamar</text>
+</svg>
