@@ -26,7 +26,7 @@
 | ¿Hay umbrales o tarifas escritos como números sueltos dentro de una regla? | Sí: el porcentaje de descuadre aceptado (3 %) y los días máximos de tránsito (14 días) estaban como literales `3.0` y `14` directamente en la condición `if`. |
 | ¿Hay alguna herencia que exista solo para reutilizar código? | No había jerarquía de herencia en el proyecto original, pero la gestión de alertas estaba mezclada en el mismo bloque de procesamiento de lotes, violando SRP. |
 
----
+-----
 
 ## Tabla SOLID — Aplicación en el Proyecto BananaLog
 
