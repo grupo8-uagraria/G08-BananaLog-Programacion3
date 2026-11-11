@@ -51,7 +51,7 @@ El banano verde ecuatoriano demora entre 12 y 18 días en barco hacia Europa o E
 ### Certificación Faltante → booleano
 No tiene umbral numérico: es un requisito binario de exportación. Sin certificación (Global G.A.P., Fairtrade, etc.) el lote no puede salir del país. La alerta se genera siempre que `certificado == false`.
 
----
+------
 
 ## Estructura de Paquetes
 
